@@ -1,0 +1,70 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: #1a1a1a;
+  scroll-behavior: smooth;
+  overflow: hidden; /* Evita el scroll nativo */
+}
+
+/* Cada sección ocupa toda la pantalla */
+.fullpage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed; /* Fija la sección en la pantalla */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100vh); /* Empieza fuera de la pantalla */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Sección visible */
+.fullpage.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sección oculta al hacer scroll hacia arriba */
+.fullpage.hide-up {
+  transform: translateY(-100vh);
+}
+
+/* Sección oculta al hacer scroll hacia abajo */
+.fullpage.hide-down {
+  transform: translateY(100vh);
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+  background: linear-gradient(135deg, #ff6f61, #ffcc00);
+}
+
+.countdown {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#timer {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Estilos para la sección de conectividad */
+#conectividad {
+  background: #333;
+}
+
+/* Estilos para la sección de grupos */
+#grupos {
+  background: #444;
+}
